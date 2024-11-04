@@ -8,7 +8,7 @@ using FinalCapitalOfSavingsConsApp;
 
 Console.WriteLine("Calculate Final Capital");
 var calculator = new FinalCapitalCalculator();
-Console.WriteLine("The final capital will be {0:F3}", calculator.GetFinalCapital());
+Console.WriteLine("The final capital after {0} years will be {1:F3}", FinalCapitalCalculator.InvestmentPeriodYears, calculator.GetFinalCapital());
 
 // Test example
 // Initial capital: 1000 euros, interest rate: 5 %, final capital: 1157.625 euros after 3 years.

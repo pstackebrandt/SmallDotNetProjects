@@ -4,7 +4,7 @@ namespace FinalCapitalOfSavingsConsApp
 {
     class FinalCapitalCalculator
     {
-        private const int InvestmentPeriodYears = 3;
+        public const int InvestmentPeriodYears = 3;
 
         public double GetFinalCapital()
         {
@@ -22,9 +22,9 @@ namespace FinalCapitalOfSavingsConsApp
         {
             while (true)
             {
-                Console.Write("Enter the interest rate: ");
+                Console.Write("Enter the interest rate (positive value, %): ");
                 var input = Console.ReadLine();
-                if (double.TryParse(input, out double interestRate))
+                if (double.TryParse(input, out double interestRate) && interestRate > 0)
                 {
                     return interestRate;
                 }
@@ -36,9 +36,9 @@ namespace FinalCapitalOfSavingsConsApp
         {
             while (true)
             {
-                Console.Write("Enter the initial capital: ");
+                Console.Write("Enter the initial capital (positive value): ");
                 var input = Console.ReadLine();
-                if (double.TryParse(input, out double capital))
+                if (double.TryParse(input, out double capital) && capital > 0)
                 {
                     return capital;
                 }
